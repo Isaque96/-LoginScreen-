@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoLogin.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace ProjetoLogin.Models
 
         public bool Access(String login, String password)
         {
+            LoginDALCommands loginDAL = new LoginDALCommands();
             return has;
         }
         public String Register(String email, String password, String confPass)
