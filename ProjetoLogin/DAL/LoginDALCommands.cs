@@ -30,6 +30,8 @@ namespace ProjetoLogin.DAL
                 {
                     has = true;
                 }
+                con.Disconnect();
+                dr.Close();
             }
             catch (SqlException)
             {
@@ -41,6 +43,26 @@ namespace ProjetoLogin.DAL
         // Insert values in SQL bank
         public String Register(String email, String password, String confPass)
         {
+            if (password.Equals(confPass))
+            {
+                cmd.CommandText = "insert into logIns values (@e,@p);";
+                cmd.Parameters.AddWithValue("@e", email);
+                cmd.Parameters.AddWithValue("@p", password);
+                
+                try
+                {
+                    cmd.Connection = con.Connect();
+                    cmd.ExecuteNonQuery();
+                    con.Disconnect();
+                    this.message = "Successfully Registered";
+                } catch (SqlException)
+                {
+                    this.message = "Erro com o banco de dados!";
+                }
+            } else
+            {
+                this.message = "Password doesn't match!";
+            }
             return message;
         }
     }
