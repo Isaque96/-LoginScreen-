@@ -13,7 +13,7 @@ namespace ProjetoLogin.DAL
 
         public Connection()
         {
-            con.ConnectionString = @"";
+            con.ConnectionString = @"Data Source=ZACK-PC\SQLEXPRESS;Initial Catalog=ProjectLogin;Integrated Security=True";
         }
 
         public SqlConnection Connect()

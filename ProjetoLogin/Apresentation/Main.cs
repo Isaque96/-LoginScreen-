@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoLogin.Apresentation;
+using ProjetoLogin.Models;
 
 namespace ProjetoLogin
 {
@@ -27,6 +28,28 @@ namespace ProjetoLogin
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            Controls control = new Controls();
+            control.Access(txbLogin.Text, txbPassword.Text);
+            if (control.message.Equals(""))
+            {
+                if (control.has)
+                {
+                    MessageBox.Show("Login Successfully", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Welcome wc = new Welcome();
+                    wc.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login not found, check your login and password", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } else
+            {
+                MessageBox.Show(control.message);
+            }
         }
     }
 }

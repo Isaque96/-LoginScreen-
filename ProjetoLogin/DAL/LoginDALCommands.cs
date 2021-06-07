@@ -15,10 +15,10 @@ namespace ProjetoLogin.DAL
         Connection con = new Connection();
         SqlDataReader dr;
 
-        // Verfica se tem no banco SQL
+        // Verify if SQL bank has it
         public bool CheckLogin(String login, String password)
         {
-            cmd.CommandText = "select * from nameOfList where email = @login and password = @password";
+            cmd.CommandText = "select * from logIns where email = @login and psword = @password";
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
 
@@ -38,7 +38,7 @@ namespace ProjetoLogin.DAL
             return has;
         }
 
-        // Inseri valores no banco SQL
+        // Insert values in SQL bank
         public String Register(String email, String password, String confPass)
         {
             return message;
