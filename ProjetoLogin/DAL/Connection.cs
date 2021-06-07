@@ -1,12 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjetoLogin.DAL
 {
-    class Connection
+    public class Connection
     {
+        SqlConnection con = new SqlConnection();
+
+        public Connection()
+        {
+            con.ConnectionString = @"";
+        }
+
+        public SqlConnection Connect()
+        {
+            if (con.State == System.Data.ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            return con;
+        }
+
+        public void Disconnect()
+        {
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                con.Close();
+            }
+        }
     }
 }

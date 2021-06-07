@@ -15,6 +15,12 @@ namespace ProjetoLogin.Models
         public bool Access(String login, String password)
         {
             LoginDALCommands loginDAL = new LoginDALCommands();
+            has = loginDAL.CheckLogin(login, password);
+
+            if (!loginDAL.message.Equals(""))
+            {
+                this.message = loginDAL.message;
+            }
             return has;
         }
         public String Register(String email, String password, String confPass)
