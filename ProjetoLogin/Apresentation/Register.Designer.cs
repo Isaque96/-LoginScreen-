@@ -37,7 +37,7 @@ namespace ProjetoLogin.Apresentation
             this.txbRegPassword = new System.Windows.Forms.TextBox();
             this.txbRegConfirm = new System.Windows.Forms.TextBox();
             this.lblRegisterBirthday = new System.Windows.Forms.Label();
-            this.txbRegBirthday = new System.Windows.Forms.TextBox();
+            this.dtpRegBirthday = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblRegisterLogin
@@ -76,6 +76,7 @@ namespace ProjetoLogin.Apresentation
             this.btnRegRegister.TabIndex = 3;
             this.btnRegRegister.Text = "REGISTER";
             this.btnRegRegister.UseVisualStyleBackColor = true;
+            this.btnRegRegister.Click += new System.EventHandler(this.btnRegRegister_Click);
             // 
             // txbRegLogin
             // 
@@ -107,19 +108,20 @@ namespace ProjetoLogin.Apresentation
             this.lblRegisterBirthday.TabIndex = 7;
             this.lblRegisterBirthday.Text = "BIRTHDAY";
             // 
-            // txbRegBirthday
+            // dtpRegBirthday
             // 
-            this.txbRegBirthday.Location = new System.Drawing.Point(209, 169);
-            this.txbRegBirthday.Name = "txbRegBirthday";
-            this.txbRegBirthday.Size = new System.Drawing.Size(112, 23);
-            this.txbRegBirthday.TabIndex = 8;
+            this.dtpRegBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpRegBirthday.Location = new System.Drawing.Point(209, 169);
+            this.dtpRegBirthday.Name = "dtpRegBirthday";
+            this.dtpRegBirthday.Size = new System.Drawing.Size(200, 23);
+            this.dtpRegBirthday.TabIndex = 8;
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 281);
-            this.Controls.Add(this.txbRegBirthday);
+            this.Controls.Add(this.dtpRegBirthday);
             this.Controls.Add(this.lblRegisterBirthday);
             this.Controls.Add(this.txbRegConfirm);
             this.Controls.Add(this.txbRegPassword);
@@ -148,6 +150,6 @@ namespace ProjetoLogin.Apresentation
         private System.Windows.Forms.TextBox txbRegPassword;
         private System.Windows.Forms.TextBox txbRegConfirm;
         private System.Windows.Forms.Label lblRegisterBirthday;
-        private System.Windows.Forms.TextBox txbRegBirthday;
+        private System.Windows.Forms.DateTimePicker dtpRegBirthday;
     }
 }

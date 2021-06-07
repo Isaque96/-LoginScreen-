@@ -43,18 +43,20 @@ namespace ProjetoLogin.DAL
         // Insert values in SQL bank
         public String Register(String email, String password, String confPass)
         {
+            has = false;
             if (password.Equals(confPass))
             {
                 cmd.CommandText = "insert into logIns values (@e,@p);";
                 cmd.Parameters.AddWithValue("@e", email);
                 cmd.Parameters.AddWithValue("@p", password);
-                
+
                 try
                 {
                     cmd.Connection = con.Connect();
                     cmd.ExecuteNonQuery();
                     con.Disconnect();
                     this.message = "Successfully Registered";
+                    has = true;
                 } catch (SqlException)
                 {
                     this.message = "Erro com o banco de dados!";
