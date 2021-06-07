@@ -7,29 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoLogin.Apresentation;
 
 namespace ProjetoLogin
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            Register reg = new Register();
+            reg.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

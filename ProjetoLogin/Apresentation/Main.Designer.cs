@@ -1,7 +1,7 @@
 ﻿
 namespace ProjetoLogin
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProjetoLogin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@ namespace ProjetoLogin
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnEnter
             // 
@@ -70,7 +71,6 @@ namespace ProjetoLogin
             this.lblLogin.Size = new System.Drawing.Size(45, 15);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "LOGIN";
-            this.lblLogin.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPassword
             // 
@@ -116,8 +116,9 @@ namespace ProjetoLogin
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,9 +134,8 @@ namespace ProjetoLogin
             this.Controls.Add(this.btnClose);
             this.Font = new System.Drawing.Font("NewsGoth BT", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
