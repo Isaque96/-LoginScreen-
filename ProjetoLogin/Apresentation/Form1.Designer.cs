@@ -44,7 +44,7 @@ namespace ProjetoLogin
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("NewsGoth BT", 9.75F);
-            this.btnClose.Location = new System.Drawing.Point(525, 439);
+            this.btnClose.Location = new System.Drawing.Point(356, 240);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(87, 27);
             this.btnClose.TabIndex = 1;
@@ -54,7 +54,7 @@ namespace ProjetoLogin
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(356, 439);
+            this.btnEnter.Location = new System.Drawing.Point(263, 240);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(87, 27);
             this.btnEnter.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace ProjetoLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(353, 131);
+            this.lblLogin.Location = new System.Drawing.Point(234, 59);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(45, 15);
             this.lblLogin.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace ProjetoLogin
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("NewsGoth BT", 9.75F);
-            this.lblPassword.Location = new System.Drawing.Point(353, 200);
+            this.lblPassword.Location = new System.Drawing.Point(234, 109);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(75, 15);
             this.lblPassword.TabIndex = 4;
@@ -84,14 +84,14 @@ namespace ProjetoLogin
             // 
             // txbLogin
             // 
-            this.txbLogin.Location = new System.Drawing.Point(444, 131);
+            this.txbLogin.Location = new System.Drawing.Point(327, 59);
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.Size = new System.Drawing.Size(116, 23);
             this.txbLogin.TabIndex = 5;
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(444, 200);
+            this.txbPassword.Location = new System.Drawing.Point(327, 109);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(116, 23);
@@ -100,9 +100,9 @@ namespace ProjetoLogin
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 208);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -110,7 +110,7 @@ namespace ProjetoLogin
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("NewsGoth BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(87, 324);
+            this.btnRegister.Location = new System.Drawing.Point(49, 210);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(143, 57);
             this.btnRegister.TabIndex = 8;
@@ -122,7 +122,7 @@ namespace ProjetoLogin
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(673, 501);
+            this.ClientSize = new System.Drawing.Size(487, 320);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txbPassword);
