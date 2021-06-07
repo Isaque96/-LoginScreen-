@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace ProjetoLogin.Models
 {
-    class Controls
+    public class Controls
     {
+        public bool has;
+        public String message = "";
+
+        public bool Access(String login, String password)
+        {
+            return has;
+        }
+        public String Register(String email, String password, String confPass)
+        {
+            return message;
+        }
     }
 }
