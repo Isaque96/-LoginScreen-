@@ -25,7 +25,7 @@ namespace ProjetoLogin.Apresentation
         private void btnRegRegister_Click(object sender, EventArgs e)
         {
             Controls control = new Controls();
-            String message = control.Register(txbRegLogin.Text, txbRegPassword.Text, txbRegConfirm.Text);
+            String message = control.Register(txbRegLogin.Text, txbRegPassword.Text, txbRegConfirm.Text, dtpRegBirthday.Value);
             
             if (control.has)
             {

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoLogin.DAL
 {
@@ -41,14 +37,15 @@ namespace ProjetoLogin.DAL
         }
 
         // Insert values in SQL bank
-        public String Register(String email, String password, String confPass)
+        public String Register(String email, String password, String confPass, DateTime birthday)
         {
             has = false;
             if (password.Equals(confPass))
             {
-                cmd.CommandText = "insert into logIns values (@e,@p);";
+                cmd.CommandText = "insert into logIns values (@e,@p,@b);";
                 cmd.Parameters.AddWithValue("@e", email);
                 cmd.Parameters.AddWithValue("@p", password);
+                cmd.Parameters.AddWithValue("@b", birthday);
 
                 try
                 {

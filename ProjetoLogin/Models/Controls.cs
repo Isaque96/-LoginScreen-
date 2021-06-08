@@ -23,10 +23,10 @@ namespace ProjetoLogin.Models
             }
             return has;
         }
-        public String Register(String email, String password, String confPass)
+        public String Register(String email, String password, String confPass, DateTime birthday)
         {
             LoginDALCommands loginDAL = new LoginDALCommands();
-            this.message = loginDAL.Register(email, password, confPass);
+            this.message = loginDAL.Register(email, password, confPass, birthday);
 
             if (loginDAL.has)
             {
