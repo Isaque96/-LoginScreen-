@@ -17,7 +17,7 @@ namespace ProjetoLogin
         public Main()
         {
             InitializeComponent();
-        }
+        }        
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -30,8 +30,17 @@ namespace ProjetoLogin
             Application.Exit();
         }
 
+        // To keep the value
+        public static string email;
+        public static string rec
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            rec = txbLogin.Text;
             Controls control = new Controls();
             control.Access(txbLogin.Text, txbPassword.Text);
             if (control.message.Equals(""))

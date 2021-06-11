@@ -30,8 +30,10 @@ namespace ProjetoLogin.Apresentation
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lblToday = new System.Windows.Forms.Label();
+            this.lblTD = new System.Windows.Forms.Label();
+            this.lblTxtYB = new System.Windows.Forms.Label();
+            this.lblBirthShow = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -44,15 +46,6 @@ namespace ProjetoLogin.Apresentation
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "WELCOME";
             // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker.Location = new System.Drawing.Point(364, 246);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(95, 23);
-            this.dateTimePicker.TabIndex = 1;
-            // 
             // lblToday
             // 
             this.lblToday.AutoSize = true;
@@ -62,18 +55,48 @@ namespace ProjetoLogin.Apresentation
             this.lblToday.TabIndex = 2;
             this.lblToday.Text = "Today\'s Date:";
             // 
+            // lblTD
+            // 
+            this.lblTD.AutoSize = true;
+            this.lblTD.Location = new System.Drawing.Point(364, 252);
+            this.lblTD.Name = "lblTD";
+            this.lblTD.Size = new System.Drawing.Size(33, 15);
+            this.lblTD.TabIndex = 3;
+            this.lblTD.Text = "Date";
+            // 
+            // lblTxtYB
+            // 
+            this.lblTxtYB.AutoSize = true;
+            this.lblTxtYB.Location = new System.Drawing.Point(22, 252);
+            this.lblTxtYB.Name = "lblTxtYB";
+            this.lblTxtYB.Size = new System.Drawing.Size(99, 15);
+            this.lblTxtYB.TabIndex = 4;
+            this.lblTxtYB.Text = "Your Birthday is:";
+            // 
+            // lblBirthShow
+            // 
+            this.lblBirthShow.AutoSize = true;
+            this.lblBirthShow.Location = new System.Drawing.Point(127, 252);
+            this.lblBirthShow.Name = "lblBirthShow";
+            this.lblBirthShow.Size = new System.Drawing.Size(33, 15);
+            this.lblBirthShow.TabIndex = 5;
+            this.lblBirthShow.Text = "Birth";
+            // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 281);
+            this.Controls.Add(this.lblBirthShow);
+            this.Controls.Add(this.lblTxtYB);
+            this.Controls.Add(this.lblTD);
             this.Controls.Add(this.lblToday);
-            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Welcome";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +105,9 @@ namespace ProjetoLogin.Apresentation
         #endregion
 
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label lblToday;
+        private System.Windows.Forms.Label lblTD;
+        private System.Windows.Forms.Label lblTxtYB;
+        private System.Windows.Forms.Label lblBirthShow;
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace ProjetoLogin.DAL
 {
@@ -11,7 +13,7 @@ namespace ProjetoLogin.DAL
         Connection con = new Connection();
         SqlDataReader dr;
 
-        // Verify if SQL bank has it
+        // Verify if SQL has it
         public bool CheckLogin(String login, String password)
         {
             cmd.CommandText = "select * from logIns where email = @login and psword = @password";
@@ -31,12 +33,12 @@ namespace ProjetoLogin.DAL
             }
             catch (SqlException)
             {
-                this.message = "Erro com o banco de dados!";
+                this.message = "Database Error!";
             }
             return has;
         }
 
-        // Insert values in SQL bank
+        // Insert values in SQL
         public String Register(String email, String password, String confPass, DateTime birthday)
         {
             has = false;
@@ -56,7 +58,7 @@ namespace ProjetoLogin.DAL
                     has = true;
                 } catch (SqlException)
                 {
-                    this.message = "Erro com o banco de dados!";
+                    this.message = "Database Error!";
                 }
             } else
             {
@@ -64,5 +66,29 @@ namespace ProjetoLogin.DAL
             }
             return message;
         }
+
+        // Access Birthday Values in SQL 
+        public DateTime AccessBirthday(String email)
+        {
+            DateTime birth = DateTime.Now;
+            cmd.CommandText = "select birthday from logIns where email = @e";
+            cmd.Parameters.AddWithValue("@e", email);
+            try
+            {
+                cmd.Connection = con.Connect();
+                
+                birth = (DateTime)cmd.ExecuteScalar();                
+
+                con.Disconnect();                
+                has = true;
+            }
+            catch (SqlException)
+            {
+                this.message = "Database Error!";
+            }
+
+            return birth;
+        }
+
     }
 }

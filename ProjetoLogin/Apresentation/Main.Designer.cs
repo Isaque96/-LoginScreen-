@@ -148,7 +148,7 @@ namespace ProjetoLogin
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txbLogin;
+        public System.Windows.Forms.TextBox txbLogin;
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnRegister;
