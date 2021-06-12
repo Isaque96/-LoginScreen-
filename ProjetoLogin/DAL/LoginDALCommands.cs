@@ -90,5 +90,23 @@ namespace ProjetoLogin.DAL
             return birth;
         }
 
+        // Days Until Birthday
+        public string DaysUtlBD(DateTime today, DateTime birthday)
+        { 
+            DateTime next = birthday.AddYears(today.Year - birthday.Year);
+
+            if (DateTime.Compare(next, today) < 0)
+            {
+                next = next.AddYears(1);
+            }            
+        
+            if (DateTime.Compare(next, today) == 0)
+            {
+                return "Happy Birthday!!";
+            }
+
+            int numDays = (int)next.Subtract(today).TotalDays;
+            return $"{numDays} days until your birthday";
+        }
     }
 }

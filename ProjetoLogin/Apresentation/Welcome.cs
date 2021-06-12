@@ -14,10 +14,14 @@ namespace ProjetoLogin.Apresentation
         }
 
         private void Welcome_Load(object sender, EventArgs e)
-        {
+        {            
             LoginDALCommands login = new LoginDALCommands();
+            DateTime today = DateTime.Today;
+            DateTime birthday = login.AccessBirthday(Main.rec);
+            
             lblTD.Text = DateTime.Now.ToShortDateString();
-            lblBirthShow.Text = login.AccessBirthday(Main.rec).ToString("dd/MM/yyyy");
+            lblBirthShow.Text = birthday.ToString("dd/MM/yyyy");
+            lblUtlBD.Text = login.DaysUtlBD(today, birthday);
         }
     }
 }

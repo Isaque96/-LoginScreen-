@@ -134,7 +134,7 @@ namespace ProjetoLogin
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnClose);
             this.Font = new System.Drawing.Font("NewsGoth BT", 9.75F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Main";
             this.Text = "Main";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

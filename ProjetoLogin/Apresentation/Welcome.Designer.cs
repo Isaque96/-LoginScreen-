@@ -34,6 +34,7 @@ namespace ProjetoLogin.Apresentation
             this.lblTD = new System.Windows.Forms.Label();
             this.lblTxtYB = new System.Windows.Forms.Label();
             this.lblBirthShow = new System.Windows.Forms.Label();
+            this.lblUtlBD = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -82,11 +83,21 @@ namespace ProjetoLogin.Apresentation
             this.lblBirthShow.TabIndex = 5;
             this.lblBirthShow.Text = "Birth";
             // 
+            // lblUtlBD
+            // 
+            this.lblUtlBD.AutoSize = true;
+            this.lblUtlBD.Location = new System.Drawing.Point(189, 136);
+            this.lblUtlBD.Name = "lblUtlBD";
+            this.lblUtlBD.Size = new System.Drawing.Size(86, 15);
+            this.lblUtlBD.TabIndex = 6;
+            this.lblUtlBD.Text = "Days Until BD";
+            // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 281);
+            this.Controls.Add(this.lblUtlBD);
             this.Controls.Add(this.lblBirthShow);
             this.Controls.Add(this.lblTxtYB);
             this.Controls.Add(this.lblTD);
@@ -109,5 +120,6 @@ namespace ProjetoLogin.Apresentation
         private System.Windows.Forms.Label lblTD;
         private System.Windows.Forms.Label lblTxtYB;
         private System.Windows.Forms.Label lblBirthShow;
+        private System.Windows.Forms.Label lblUtlBD;
     }
 }
